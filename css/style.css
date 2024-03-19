@@ -107,7 +107,8 @@ body{
 
 .project img{
     border-radius: 5px;
-    width: inherit;
+    max-width: 340px;
+    max-height: 220px;
     justify-self: center;
 }
 
