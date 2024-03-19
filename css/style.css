@@ -19,7 +19,7 @@ body{
 .container{
     display: grid;
     grid-template-rows: 75px 1fr 50px;
-    
+
     height: 100vh;
 }
 
@@ -32,7 +32,7 @@ body{
     box-shadow: 0px 2px 3px var(--secondary-color-shadow);
 
     display: grid;
-    grid-template-columns: auto 1fr 200px 200px;
+    grid-template-columns: auto 1fr 200px 200px 200px;
 
     align-items: center;
 }
@@ -44,16 +44,18 @@ body{
     font-size: 36px;
 }
 
-.header a{
+.header a div{
     color: var(--text-color);
-    padding: 0 12px;
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
+
+    text-align: center;
 }
 
-.header > .link-container{
-    text-align: center;
+.header > a{
+    text-decoration: none;
+
     height: 100%;
 
     display: grid;
@@ -63,14 +65,90 @@ body{
     transition: 0.2s;
 }
 
-.header > .link-container:hover{
+.header > a:hover{
     background-color: var(--hover-color);
 }
 
 .content{
     background-color: var(--secondary-color);
 
+    color: var(--text-color);
+
+    text-align: center;
+
+    padding: 3%;
+}
+
+.index-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.projects-container{
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    justify-items: center;
+}
+
+.project{
+    background-color: var(--primary-color);
     padding: 12px;
+    border-radius: 15px;
+    
+    width: 340px;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+}
+
+.project img{
+    border-radius: 5px;
+    width: inherit;
+    justify-self: center;
+}
+
+.project .text-part{
+    margin: 12px 0;
+}
+
+.project .name{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.project .description{
+    font-size: 18px;
+
+    display: grid;
+}
+
+.project > .links{
+    display: flex;
+    gap: 24px;
+
+    margin-top: 12px;
+}
+
+.project .link{
+    flex: 1;
+
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+
+    color: var(--text-color);
+    font-size: 18px;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.project .link:hover{
+    background-color: var(--hover-color);
 }
 
 .footer{
