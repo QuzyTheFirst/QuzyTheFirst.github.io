@@ -95,8 +95,13 @@ body{
     align-self: end;
 }
 
-.index-container img{
+.index-container img,
+.index-container a{
     max-width: 150px;
+}
+
+.index-container a{
+    justify-self: center;
 }
 
 .index-container > a:first-of-type > img{
