@@ -81,9 +81,26 @@ body{
 
 .index-container{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-content: center;
     height: 100%;
+
+    row-gap: 24px;
+}
+
+.index-container > div:first-child{
+    grid-column: 1 / -1;
+    align-self: end;
+}
+
+.index-container img{
+    max-width: 150px;
+}
+
+.index-container > a:first-of-type > img{
+    filter:invert(100%);
 }
 
 .projects-container{
